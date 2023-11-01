@@ -27,11 +27,13 @@ function validate() {
   var inputs = document.querySelectorAll("input")
   var validator = true
 
+
+
   inputs.forEach((i) => {
     var parent = i.parentElement
     if (!i.value) {
       i.style.borderColor = "red"
-      window.alert("Ano Inválido!")
+      window.alert("Ano Inválida!")
       validator = false
     }
     else if (yearInp.value > year ||
@@ -46,6 +48,13 @@ function validate() {
         
         window.alert("Digite Datas Abaixo da Atual!!")
         validator = false
+
+    }
+
+    else if(dayInp.value > months[monthInp.value - 1]) {
+      window.alert("Esse mês não possui esse tanto de dias!")
+      validator = false
+      
 
     }
     
@@ -66,14 +75,15 @@ function validate() {
 
     
     }
-  });
-  return validator;
+  })
+  return validator
 }
 function handleSubmit(e) {
   var day_copy = day
   var month_copy = month
+  var year_copy = year
 
-
+  
   e.preventDefault();
   if (validate()) {
 
@@ -84,37 +94,22 @@ function handleSubmit(e) {
     }
     if (monthInp.value > month) {
       month_copy = month + 12
-      year = year - 1
-    }
+      year_copy = year - 1
 
+
+    }
 
     let d = day_copy - dayInp.value
     let m = month_copy - monthInp.value
-    let y = year - yearInp.value
+    let y = year_copy - yearInp.value
+
 
     dayOtp.innerHTML = d
     monthOtp.innerHTML = m
     yearOtp.innerHTML = y
-
-
-
     
   }
 }
 
 
-
 form.addEventListener("submit", handleSubmit)
-
-
-
-
-
-
-
-
-
-
-
-
-
