@@ -20,7 +20,7 @@ var year = date.getFullYear()
 
 // day  month + 1   year
 
-const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 function validate() {
 
@@ -87,7 +87,6 @@ function handleSubmit(e) {
   e.preventDefault();
   if (validate()) {
 
-
     if (dayInp.value > day) {
       day_copy = day + months[month - 1]
       month_copy = month - 1
@@ -96,12 +95,19 @@ function handleSubmit(e) {
       month_copy = month + 12
       year_copy = year - 1
 
-
     }
 
-    let d = day_copy - dayInp.value
-    let m = month_copy - monthInp.value
-    let y = year_copy - yearInp.value
+    if(dayInp.value == day & monthInp.value == month & yearInp.value == year || 
+       dayInp.value == day & monthInp.value == month & yearInp.value != year) {
+      null
+    }
+    else {
+      day_copy += 1
+    }
+
+    var d = day_copy - dayInp.value
+    var m = month_copy - monthInp.value
+    var y = year_copy - yearInp.value
 
 
     dayOtp.innerHTML = d
@@ -112,4 +118,18 @@ function handleSubmit(e) {
 }
 
 
+
 form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+
+
+
+
+
+
+
+
