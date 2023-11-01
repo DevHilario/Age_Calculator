@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+    
+    
+</head>
+<body>
+
+    <div class="card">
+        <div class="contanier">
+            <form>
+                <div class="form_contanier">
+                    <div class="block">
+                        <label for="day">
+                            Dia
+                        </label>
+                        <select name="day" id="day">
+
+                            <option selected=""></option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            
+                        </select>
+
+                        <small></small>
+                    </div>
+                    <div class="block">
+                        <label for="month">
+                            Mês
+                        </label>
+                        <select name="month" id="month">
+
+                            <option selected=""></option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+
+                        </select>
+                        <small></small>
+                    </div>
+                    <div class="block">
+                        <label for="year">
+                            Ano
+                        </label>
+                        <input type="number" id="year" placeholder="AAAA">
+                        <small></small>
+                    </div>
+                </div>
+                <div class="submit_block">
+                    <hr>
+                    <button type="submit" class="submit_btn"><img src="button_img.jpg" alt="icone"></button>
+                </div>
+            </form>
+
+            <div class="output">
+                <h1><span id="YY">00</span> Anos</h1>
+                <h1><span id="MM">00</span> Meses</h1>
+                <h1><span id="DD">00</span> Dias</h1>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
