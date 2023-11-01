@@ -73,7 +73,6 @@ function validate() {
       i.style.borderColor = "black";
       validator = true
 
-    
     }
   })
   return validator
@@ -118,18 +117,4 @@ function handleSubmit(e) {
 }
 
 
-
 form.addEventListener("submit", handleSubmit)
-
-
-
-
-
-
-
-
-
-
-
-
-
