@@ -73,6 +73,7 @@ function validate() {
       i.style.borderColor = "black";
       validator = true
 
+    
     }
   })
   return validator
@@ -96,6 +97,14 @@ function handleSubmit(e) {
 
     }
 
+    if(dayInp.value == day & monthInp.value == month & yearInp.value == year || 
+       dayInp.value == day & monthInp.value == month & yearInp.value != year) {
+      null
+    }
+    else {
+      day_copy += 1
+    }
+
     var d = day_copy - dayInp.value
     var m = month_copy - monthInp.value
     var y = year_copy - yearInp.value
@@ -109,4 +118,6 @@ function handleSubmit(e) {
 }
 
 
+
 form.addEventListener("submit", handleSubmit)
+
