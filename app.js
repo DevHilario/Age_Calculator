@@ -31,7 +31,7 @@ function validate() {
     var parent = i.parentElement
     if (!i.value) {
       i.style.borderColor = "red"
-      window.alert("Data Inválida!")
+      window.alert("Ano Inválido!")
       validator = false
     }
     else if (yearInp.value > year ||
